@@ -17,8 +17,6 @@ export TF_STATE_FILE="${TFE_WORKSPACE_NAME}.tfstate"
 export TF_BINARY="$(which terraform)" # CHANGE ME if your pipeline uses a different version of terraform to your local
 export TEMPDIR="/dev/shm"
 
-# TODO: Ensure you are already logged into to your TFE endpoint
-terraform login "${TFE_ENDPOINT}"
 
 # these will download the state file from TFE into the TF_STATE_FILE location
 # and then upload from TF_STATE_FILE into GitLab
